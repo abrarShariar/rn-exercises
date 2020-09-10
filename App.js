@@ -1,21 +1,63 @@
-import { StatusBar } from 'expo-status-bar';
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import React from 'react'
+import { View, Text, SafeAreaView, StyleSheet } from 'react-native'
+import 'react-native-gesture-handler';
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
+import ListScreen from './components/ListScreen';
+import HomeScreen from './components/HomeScreen';
 
-export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
+
+const Stack = createStackNavigator();
+
+const App = () => {
+	return (
+		<SafeAreaView style={{ flex: 2 }}>
+			<NavigationContainer>
+				<Stack.Navigator>
+					<Stack.Screen name="HomeScreen" component={HomeScreen} />	
+					<Stack.Screen name="ListScreen" component={ListScreen} />
+				</Stack.Navigator>
+			</NavigationContainer>
+		</SafeAreaView>
+	)
 }
 
+
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+	container: {
+		paddingVertical: 10,
+		paddingHorizontal: 30,
+		alignItems: 'center',
+		justifyContent: 'center',
+		flex: 1
+	},
+	safeArea: {
+		flex: 2
+	},
+	backgroud: {
+		backgroudColor: 'pink'
+	},
+	buttonStyle: {
+		marginBottom: '20px'
+	},
+	cyan: {
+		backgroundColor: '#2aa198',
+	},
+	blue: {
+		backgroundColor: '#268bd2'
+	},
+	magenta: {
+		backgroundColor: '#d33682'
+	},
+	orange: {
+		backgroundColor: '#cb4b16'
+	},
+	box: {
+		padding: 10,
+		justifyContent: 'center',
+		marginBottom: 10,
+		width: '200px'
+	}
+})
+
+export default App;
