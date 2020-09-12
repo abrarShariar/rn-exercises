@@ -1,10 +1,9 @@
 import React from 'react'
-import { View, Text, SafeAreaView, StyleSheet } from 'react-native'
+import { SafeAreaView, StyleSheet } from 'react-native'
 import 'react-native-gesture-handler';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
-import ListScreen from './components/ListScreen';
-import HomeScreen from './components/HomeScreen';
+import { HomeScreen, ListScreen, FlatListScreen } from './components';
 
 
 const Stack = createStackNavigator();
@@ -16,6 +15,7 @@ const App = () => {
 				<Stack.Navigator>
 					<Stack.Screen name="HomeScreen" component={HomeScreen} />	
 					<Stack.Screen name="ListScreen" component={ListScreen} />
+					<Stack.Screen name="FlatListScreen" component={FlatListScreen} />
 				</Stack.Navigator>
 			</NavigationContainer>
 		</SafeAreaView>

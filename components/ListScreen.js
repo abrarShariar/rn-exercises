@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { View, Text, FlatList, SafeAreaView } from 'react-native';
+import { View, Text, FlatList } from 'react-native';
 import Food from './Food';
 
 const FOODS = [
