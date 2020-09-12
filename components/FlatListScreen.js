@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { View, Text, FlatList } from 'react-native';
+import { View, Text, FlatList, SafeAreaView } from 'react-native';
 import Color from './Color'
 
 const COLORS = [
@@ -23,18 +23,20 @@ const COLORS = [
 
 const FlatListScreen = () => {
 	return (
-		<View style={{ flex: 1,  alignItems: 'center', justifyContent: 'center' }}>
-			<Text>
-				<h1>Flat List Screen</h1>
-			</Text>
-			<FlatList
-				data={COLORS}
-				keyExtractor={item => item.hexCode}
-				renderItem={({ item }) => 
-					<Color colorObj={item}/>
-				}
-			/>
-		</View>
+		<SafeAreaView>
+			<View style={{ flex: 1,  alignItems: 'center', justifyContent: 'center' }}>
+				<Text>
+					<h1>Flat List Screen</h1>
+				</Text>
+				<FlatList
+					data={COLORS}
+					keyExtractor={item => item.hexCode}
+					renderItem={({ item }) => 
+						<Color colorObj={item}/>
+					}
+				/>
+			</View>
+		</SafeAreaView>
 	)
 }
 

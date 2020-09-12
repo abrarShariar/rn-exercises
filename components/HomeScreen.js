@@ -17,6 +17,12 @@ const HomeScreen = ({ navigation }) => {
         title="Go to Flat List Screen"
         onPress={() => navigation.navigate('FlatListScreen')}
       />
+				<br></br>
+			<Button
+				style={styles.button}
+        title="Go to Color Screen"
+        onPress={() => navigation.navigate('ColorScreen')}
+      />
 		</View>
 	)
 }
