@@ -3,7 +3,7 @@ import { SafeAreaView, StyleSheet } from 'react-native'
 import 'react-native-gesture-handler';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
-import { HomeScreen, ListScreen, FlatListScreen, ColorScreen, ColorPalette } from './components';
+import { HomeScreen, ListScreen, FlatListScreen, ColorScreen, ColorPalette, CounterScreen } from './components';
 
 const Stack = createStackNavigator();
 
@@ -17,7 +17,7 @@ const App = () => {
 					<Stack.Screen name="FlatListScreen" component={FlatListScreen} />
 					<Stack.Screen name="ColorScreen" component={ColorScreen} />
 					<Stack.Screen name="ColorPalette" component={ColorPalette} />
-
+					<Stack.Screen name="CounterScreen" component={CounterScreen} />
 				</Stack.Navigator>
 			</NavigationContainer>
 		</SafeAreaView>
